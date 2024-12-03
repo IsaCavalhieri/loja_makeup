@@ -37,12 +37,12 @@
             columnHeader5 = new ColumnHeader();
             columnHeader6 = new ColumnHeader();
             btncriar = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
+            txbnome = new TextBox();
+            txbsobrenome = new TextBox();
+            txbemail = new TextBox();
+            txbcpf = new TextBox();
+            txbcidade = new TextBox();
+            txbestado = new TextBox();
             lblnome = new Label();
             lblsobrenome = new Label();
             lblemail = new Label();
@@ -99,47 +99,49 @@
             btncriar.UseVisualStyleBackColor = true;
             btncriar.Click += btncriar_Click;
             // 
-            // textBox1
+            // txbnome
             // 
-            textBox1.Location = new Point(12, 39);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            txbnome.Location = new Point(12, 39);
+            txbnome.Name = "txbnome";
+            txbnome.Size = new Size(100, 23);
+            txbnome.TabIndex = 2;
             // 
-            // textBox2
+            // txbsobrenome
             // 
-            textBox2.Location = new Point(12, 95);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            txbsobrenome.Location = new Point(12, 95);
+            txbsobrenome.Name = "txbsobrenome";
+            txbsobrenome.Size = new Size(100, 23);
+            txbsobrenome.TabIndex = 3;
             // 
-            // textBox3
+            // txbemail
             // 
-            textBox3.Location = new Point(29, 139);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 4;
+            txbemail.Location = new Point(29, 139);
+            txbemail.Name = "txbemail";
+            txbemail.Size = new Size(100, 23);
+            txbemail.TabIndex = 4;
             // 
-            // textBox4
+            // txbcpf
             // 
-            textBox4.Location = new Point(310, 278);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 5;
+            txbcpf.Location = new Point(29, 299);
+            txbcpf.Name = "txbcpf";
+            txbcpf.Size = new Size(100, 23);
+            txbcpf.TabIndex = 5;
+            txbcpf.TextChanged += textBox4_TextChanged;
             // 
-            // textBox5
+            // txbcidade
             // 
-            textBox5.Location = new Point(12, 278);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 6;
+            txbcidade.Location = new Point(12, 186);
+            txbcidade.Name = "txbcidade";
+            txbcidade.Size = new Size(100, 23);
+            txbcidade.TabIndex = 6;
             // 
-            // textBox6
+            // txbestado
             // 
-            textBox6.Location = new Point(12, 345);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 7;
+            txbestado.Location = new Point(12, 239);
+            txbestado.Name = "txbestado";
+            txbestado.Size = new Size(100, 23);
+            txbestado.TabIndex = 7;
+            txbestado.TextChanged += textBox6_TextChanged;
             // 
             // lblnome
             // 
@@ -171,7 +173,7 @@
             // lblcidade
             // 
             lblcidade.AutoSize = true;
-            lblcidade.Location = new Point(29, 255);
+            lblcidade.Location = new Point(12, 168);
             lblcidade.Name = "lblcidade";
             lblcidade.Size = new Size(44, 15);
             lblcidade.TabIndex = 11;
@@ -180,7 +182,7 @@
             // lblestado
             // 
             lblestado.AutoSize = true;
-            lblestado.Location = new Point(26, 317);
+            lblestado.Location = new Point(20, 221);
             lblestado.Name = "lblestado";
             lblestado.Size = new Size(42, 15);
             lblestado.TabIndex = 12;
@@ -189,7 +191,7 @@
             // lblcpf
             // 
             lblcpf.AutoSize = true;
-            lblcpf.Location = new Point(200, 295);
+            lblcpf.Location = new Point(12, 281);
             lblcpf.Name = "lblcpf";
             lblcpf.Size = new Size(26, 15);
             lblcpf.TabIndex = 13;
@@ -197,12 +199,13 @@
             // 
             // btnlimpar
             // 
-            btnlimpar.Location = new Point(518, 57);
+            btnlimpar.Location = new Point(471, 85);
             btnlimpar.Name = "btnlimpar";
             btnlimpar.Size = new Size(75, 23);
             btnlimpar.TabIndex = 14;
             btnlimpar.Text = "Limpar";
             btnlimpar.UseVisualStyleBackColor = true;
+            btnlimpar.Click += btnlimpar_Click;
             // 
             // btneditar
             // 
@@ -212,24 +215,27 @@
             btneditar.TabIndex = 15;
             btneditar.Text = "Editar";
             btneditar.UseVisualStyleBackColor = true;
+            btneditar.Click += btneditar_Click;
             // 
             // btninserir
             // 
-            btninserir.Location = new Point(491, 164);
+            btninserir.Location = new Point(485, 143);
             btninserir.Name = "btninserir";
             btninserir.Size = new Size(75, 23);
             btninserir.TabIndex = 16;
             btninserir.Text = "Inserir";
             btninserir.UseVisualStyleBackColor = true;
+            btninserir.Click += btninserir_Click;
             // 
             // btnexcluir
             // 
-            btnexcluir.Location = new Point(504, 217);
+            btnexcluir.Location = new Point(501, 185);
             btnexcluir.Name = "btnexcluir";
             btnexcluir.Size = new Size(75, 23);
             btnexcluir.TabIndex = 17;
             btnexcluir.Text = "Excluir";
             btnexcluir.UseVisualStyleBackColor = true;
+            btnexcluir.Click += btnexcluir_Click;
             // 
             // Tela_cadastro
             // 
@@ -247,12 +253,12 @@
             Controls.Add(lblemail);
             Controls.Add(lblsobrenome);
             Controls.Add(lblnome);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txbestado);
+            Controls.Add(txbcidade);
+            Controls.Add(txbcpf);
+            Controls.Add(txbemail);
+            Controls.Add(txbsobrenome);
+            Controls.Add(txbnome);
             Controls.Add(btncriar);
             Controls.Add(listView1);
             Name = "Tela_cadastro";
@@ -271,12 +277,12 @@
         private ColumnHeader columnHeader5;
         private ColumnHeader columnHeader6;
         private Button btncriar;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
+        private TextBox txbnome;
+        private TextBox txbsobrenome;
+        private TextBox txbemail;
+        private TextBox txbcpf;
+        private TextBox txbcidade;
+        private TextBox txbestado;
         private Label lblnome;
         private Label lblsobrenome;
         private Label lblemail;
