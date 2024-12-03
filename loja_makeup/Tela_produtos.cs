@@ -19,7 +19,13 @@ namespace loja_makeup
 
         private void Tela_produtos_Load(object sender, EventArgs e)
         {
-          
+
+        }
+
+        private void btnvercarrinho_Click(object sender, EventArgs e)
+        {
+            Tela_carrinho tela_carrinho = new Tela_carrinho();
+            tela_carrinho.ShowDialog();
         }
     }
 }

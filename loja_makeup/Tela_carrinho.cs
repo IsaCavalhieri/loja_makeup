@@ -10,22 +10,23 @@ using System.Windows.Forms;
 
 namespace loja_makeup
 {
-    public partial class Tela_principal : Form
+    public partial class Tela_carrinho : Form
     {
-        public Tela_principal()
+        public Tela_carrinho()
         {
             InitializeComponent();
         }
 
-        private void btnoutrosprodutos_Click(object sender, EventArgs e)
+        private void Tela_carrinho_Load(object sender, EventArgs e)
         {
-            Tela_produtos tela_principal = new Tela_produtos();
-            tela_principal.ShowDialog();
+
+
         }
 
-        private void Tela_principal_Load(object sender, EventArgs e)
+        private void btncomprar_Click(object sender, EventArgs e)
         {
-
+            Tela_pagamento tela_pagamento = new Tela_pagamento();
+            tela_pagamento.ShowDialog();
         }
     }
 }

@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tela_principal));
             btnoutrosprodutos = new Button();
             SuspendLayout();
             // 
             // btnoutrosprodutos
             // 
-            btnoutrosprodutos.Location = new Point(402, 441);
+            btnoutrosprodutos.Location = new Point(378, 438);
             btnoutrosprodutos.Name = "btnoutrosprodutos";
-            btnoutrosprodutos.Size = new Size(101, 23);
+            btnoutrosprodutos.Size = new Size(88, 23);
             btnoutrosprodutos.TabIndex = 0;
-            btnoutrosprodutos.Text = "outros produtos ";
+            btnoutrosprodutos.Text = "ver produtos";
             btnoutrosprodutos.UseVisualStyleBackColor = true;
             btnoutrosprodutos.Click += btnoutrosprodutos_Click;
             // 
@@ -45,16 +46,20 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.isa;
-            ClientSize = new Size(506, 490);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(488, 482);
             Controls.Add(btnoutrosprodutos);
             Name = "Tela_principal";
             Text = "Tela_principal";
+            Load += Tela_principal_Load;
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnoutrosprodutos;
+        private Button button1;
+        private Button button2;
+        private Button button3;
     }
 }

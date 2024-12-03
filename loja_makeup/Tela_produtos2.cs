@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace loja_makeup
 {
-    public partial class Tela_cadastro : Form
+    public partial class Tela_produtos2 : Form
     {
-        public Tela_cadastro()
+        public Tela_produtos2()
         {
             InitializeComponent();
-        }
-
-        private void btncriar_Click(object sender, EventArgs e)
-        {
-            Tela_principal tela_principal = new Tela_principal();
-            tela_principal.ShowDialog();
         }
     }
 }
